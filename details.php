@@ -29,37 +29,35 @@
     <section class="form flex flex-col justify-center items-center gap-4">
         <div class="bg-black text-orange-400  w-full">
             <h1 class="font-bold text-xl py-4 text-center px-8">CONGRATS! YOU ARE JUST ONE STEP AWAY FROM MASTERING
-                POWER BI</h1>
+                DATA SCIENCE</h1>
         </div>
         <div>
             <h3 class="text-gray-700 text-center font-bold">Anyone from any field can attend this workshop.</h3>
         </div>
         <div>
             <h3 class="font-semibold text-center text-2xl md:text-3xl">Simply Pay <span class="text-red-600 font-bold">₹
-                    99 +
-                    GST</span> and Get Started</h3>
+                    99</span> and Get Started</h3>
         </div>
 
         <div class="bg-[#030a21] text-white w-80  p-4 rounded-3xl">
             <div class="flex items-center justify-center mb-4">
-                <img src="images/logo.png" alt="" class="h-20 w-40 p-2">
+                <img src="images/logo.png" alt="" class="h-20 w-40 p-2 rounded-[20px]">
             </div>
             <h3 class="text-left font-semibold mb-2">Data Science Workshop</h3>
-            <p class="text-left text-lg mb-2">₹99.21 <span class="line-through">₹1999</span></p>
-            <p class="text-left text-gray-400 font-bold">+ GST</p>
+            <p class="text-left text-lg mb-2">₹99 <span class="line-through">₹1999</span></p>
         </div>
 
         <div class="w-80">
-            <form method="post" action="connect.php" class="flex flex-col gap-4">
+            <form method="post" action="connect.php" class="flex flex-col gap-4" id="detailform">
                 <div class="flex flex-col gap-2">
                     <label for="" class="text-sm font-semibold">Full Name<span class="text-red-700">*</span></label>
                     <input type="text" name="full_name" id="" placeholder="Your Name"
-                        class="border-[1px] border-gray-400 rounded-lg p-2">
+                        class="border-[1px] border-gray-400 rounded-lg p-2" required>
                 </div>
                 <div class="flex flex-col gap-2">
                     <label for="" class="text-sm font-semibold">Email Address<span class="text-red-700">*</span></label>
-                    <input type="text" name="email" id="" placeholder="example@example.com"
-                        class="border-[1px] border-gray-400 rounded-lg p-2">
+                    <input type="email" name="email" id="" placeholder="example@example.com"
+                        class="border-[1px] border-gray-400 rounded-lg p-2" required>
                 </div>
                 <div class="flex flex-col gap-2">
                     <label for="" class="text-sm font-semibold">Mobile Number (WhatsApp Number)<span
@@ -76,10 +74,11 @@
                         <label for="phone-input" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Phone
                             number:</label>
                         <div class="relative w-full">
-                            <input type="text" name="mobile" id="phone-input"
+                            <input maxlength="10" name="mobile" id="phone-input"
                                 class="border-[1px] border-gray-400 block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-0 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="XXXXXXXXXX" required />
                         </div>
                     </div>
+                    <div><span id="error" style="color: red; display: none;">Please enter a valid 10-digit mobile number.</span></div>
                 </div>
                 <div class="flex gap-2 items-center font-semibold text-gray-600">
                     <p>You will get updates on your Whatsapp </p><img src="images/wtsp.svg" alt="" class="h-6">
@@ -94,44 +93,10 @@
             </form>
         </div>
 
-        <div>
-            <div class="mx-auto max-w-7xl">
-                <div id="base-text" class="text-center">
-                    <h1 class="font-semibold text-gray-800 md:text-3xl md:font-bold ">Also, register before the deadline to unlock
-                        Bonuses worth ₹<!-- --> <!-- -->10,500<!-- -->!</h1>
-                </div>
-                <div class="m-3 grid grid-cols-1 justify-center gap-4 p-3 text-center md:grid-cols-3" id="bonuses">
-                    <div class="mt-4 flex justify-center ">
-                        <div class="flex h-auto w-[350px] flex-col items-center rounded-lg border-2 border-black p-2">
-                            <p class="h-15 m-2 rounded-lg bg-black p-2 font-bold text-green-500 md:m-3 md:text-xl">Bonus 1</p>
-                            <p class=" m-1  whitespace-normal p-1 text-gray-500 md:text-lg">Access to 3 hours Value Packed Live
-                                Workshop on Excel using ChatGPT and AI Tools &amp; 30+ MS Excel Automation Templates</p>
-                            <p class="m-1 p-1 font-semibold text-red-600 md:text-xl">Value: ₹ <!-- -->4,000</p>
-                        </div>
-                    </div>
-                    <div class="mt-4 flex justify-center ">
-                        <div class="flex h-auto w-[350px] flex-col items-center rounded-lg border-2 border-black p-2">
-                            <p class="h-15 m-2 rounded-lg bg-black p-2 font-bold text-green-500 md:m-3 md:text-xl">Bonus 2</p>
-                            <p class=" m-1  whitespace-normal p-1 text-gray-500 md:text-lg">Complete MS Office Essential Shortcuts
-                                Guide to Work 10X Faster in MS Office</p>
-                            <p class="m-1 p-1 font-semibold text-red-600 md:text-xl">Value: ₹ <!-- -->3,000</p>
-                        </div>
-                    </div>
-                    <div class="mt-4 flex justify-center ">
-                        <div class="flex h-auto w-[350px] flex-col items-center rounded-lg border-2 border-black p-2">
-                            <p class="h-15 m-2 rounded-lg bg-black p-2 font-bold text-green-500 md:m-3 md:text-xl">Bonus 3</p>
-                            <p class=" m-1  whitespace-normal p-1 text-gray-500 md:text-lg">2 Power BI Practice Projects for Your
-                                Resume</p>
-                            <p class="m-1 p-1 font-semibold text-red-600 md:text-xl">Value: ₹ <!-- -->3,500</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="m-3 flex flex-col items-center p-3">
             <h1 class="text-center font-normal text-gray-800 md:text-xl md:font-medium ">By the end of this 3-hour certified
-                PowerBI Domination Workshop, you will also get a completion certificate by Office Master.</h1>
+                Data Science Domination Workshop, you will also get a completion certificate by the Institute.</h1>
         </div>
 
         <div
@@ -174,6 +139,51 @@
         </div>
     </section>
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('detailform');
+    const mobileNumberInput = document.getElementById('phone-input');
+    const errorSpan = document.getElementById('error');
+
+    form.addEventListener('submit', function(event) {
+        const mobileNumber = mobileNumberInput.value;
+
+        if (!validateMobileNumber(mobileNumber)) {
+            event.preventDefault();
+            errorSpan.style.display = 'inline';
+        } else {
+            errorSpan.style.display = 'none';
+        }
+    });
+
+    mobileNumberInput.addEventListener('input', function() {
+        const mobileNumber = mobileNumberInput.value;
+
+        if (!validateMobileNumber(mobileNumber)) {
+            errorSpan.style.display = 'inline';
+        } else {
+            errorSpan.style.display = 'none';
+        }
+    });
+
+    function validateMobileNumber(number) {
+        // Check if the number is exactly 10 digits and consists of only numbers
+        if (number.length !== 10) {
+            return false;
+        }
+
+        for (let i = 0; i < number.length; i++) {
+            if (number.charCodeAt(i) < 48 || number.charCodeAt(i) > 57) { // 48 is the char code for '0' and 57 is '9'
+                return false;
+            }
+        }
+        return true;
+    }
+});
+
+    </script>
+    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
